@@ -1,0 +1,234 @@
+/* link de google fonts. roboto 100, 400 y 700 bold) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Work+Sans:ital,wght@0,300;0,700;1,900&display=swap');
+
+/* reset y estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #23363a;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo img:hover {
+    opacity: 90%;
+}
+
+/* Estilos de Home productos */
+
+.contenedor-general {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+aside {
+    padding: 2rem;
+    color: whitesmoke;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: none;
+    color: #23363a;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.boton-menu:hover {
+    color: black;
+}
+
+.boton-menu.active {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 4px 3px 8px 0px rgb(210, 210, 210);
+}
+
+.li-boton-carrito {
+    margin-top: 4rem;
+}
+
+.numerito {
+    background-color: #96b4de7c;
+    color: #23363a;
+    padding: 0.2rem 0.3rem;
+    border-radius: 4px;
+}
+
+.texto-footer {
+    color: #23363a;
+    font-size: 0.9rem;
+}
+
+main {
+    background-color: whitesmoke;
+    margin: 1rem;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.titulo-principal {
+    color: #23363a;
+    margin-bottom: 2rem;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.producto-imagen {
+    max-width: 100%;
+}
+
+.producto-detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto-titulo {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.producto-precio {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.producto-agregar {
+    padding: 0.3rem 1.5rem 0.4rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    box-shadow: 4px 3px 8px 0px rgb(210, 210, 210);
+    margin-bottom: 1rem;
+    background-color: #7aa3db;
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.producto-agregar:hover {
+    cursor: pointer;
+    background-color: #96b4de;
+}
+
+
+/* Estilos del carrito */
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    color: #23363a;
+}
+
+.nav-carrito ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+}
+
+.carrito-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carrito-producto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #96b4de71;
+    border-radius: 20px;
+    box-shadow: 4px 3px 8px 0px rgb(233, 232, 232);
+    padding: 1.3rem;
+}
+
+.carrito-producto-imagen {
+    width: 17%;
+}
+
+.carrito-producto-cantidad, .carrito-producto-precio, .carrito-producto-subtotal {
+    text-align: center;
+}
+
+.carrito-producto-eliminar {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.carrito-acciones {
+    display: flex;
+    justify-content: end;
+    margin-right: 4rem;
+    margin-top: 2rem;
+}
+
+.carrito-acciones-total {
+    display: flex;
+    font-weight: 700;
+    padding: 1rem;
+    text-transform: uppercase;
+    gap: 1rem;
+}
+
+.carrito-acciones-comprar {
+    cursor: pointer;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    box-shadow: 4px 3px 8px 0px rgb(210, 210, 210);
+    background-color: #7aa3db;
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.carrito-acciones-comprar:hover {
+    background-color: #96b4de;
+}
+
+.disabled {
+    display: none;
+}
