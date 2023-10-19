@@ -35,7 +35,7 @@ function cargarProductosCarrito() {
                     <p>${producto.cantidad}</p>
                 </div>
                 <div class="carrito-producto-precio">
-                    <small>Precio</small>
+                    <small>Precio Unitario</small>
                     <p>$${producto.precio}</p>
                 </div>
                 <div class="carrito-producto-subtotal">
@@ -70,6 +70,21 @@ function actualizarBotonesEliminar() {
 }
 
 function eliminarDelCarrito(e) {
+
+    Toastify({
+        text: "PRODUCTO ELIMINADO",
+        duration: 2000,
+        close: true,
+        position: "right",
+        gravity: "top",
+        stopOnFocus: true,
+        style: {
+          background: "#7aa3db",
+          borderRadius: "2rem",
+          fontSize: "0.75rem"
+        }
+    }).showToast()
+
     const idBoton = e.currentTarget.id
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton)
     
