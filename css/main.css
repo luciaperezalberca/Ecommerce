@@ -81,9 +81,18 @@ aside {
     border-radius: 4px;
 }
 
+footer a {
+    font-weight: bold;
+}
+
+footer a:hover, .boton-menu:hover {
+    color: #7aa3db;
+}
+
 .texto-footer {
     color: #23363a;
     font-size: 0.9rem;
+    margin-top: 1rem;
 }
 
 main {
@@ -231,4 +240,53 @@ main {
 
 .disabled {
     display: none;
+}
+
+/* Estilos de about */
+
+.main-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 1rem 3rem 1rem;
+}
+
+.titulo-about {
+    margin-bottom: 1rem;
+}
+
+.info-about {
+    width: 70%;
+    text-align: center;
+}
+
+.info-about p {
+    line-height: 1.7rem;
+}
+
+.foto-empresa img {
+    width: 90%;
+    border-radius: 1rem;
+}
+
+.section-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    line-height: 1.7rem;
+    margin: 2rem;
+}
+
+.datos-empresa {
+    background-color: #96b4de25;
+    box-shadow: 4px 3px 8px 0px rgb(210, 210, 210);
+    padding: 2rem;
+    width: fit-content;
+    border-radius: 1.5rem;
+}
+
+.titulo-cards-about {
+    margin-bottom: 1rem;
 }

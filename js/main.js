@@ -65,16 +65,8 @@ function actualizarBotonesAgregar() {
     })
 }
 
-let productosEnCarrito
-
-let productosEnCarritoLS = localStorage.getItem("productos-en-carrito")
-
-if (productosEnCarritoLS) {
-    productosEnCarrito = JSON.parse(productosEnCarritoLS)
-    actualizarNumerito()
-} else {
-    productosEnCarrito = []
-}
+let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || []
+if (productosEnCarrito.length > 0) actualizarNumerito()
 
 function agregarAlCarrito(e) {
 
