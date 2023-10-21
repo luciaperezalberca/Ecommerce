@@ -1,74 +1,74 @@
-let productos = []
+let products = []
 
-fetch("js/productos.json")
+fetch("js/products.json")
     .then(response => response.json())
     .then(data => {
-        productos = data
-        cargarProductos(productos)
+        products = data
+        uploadProducts(products)
     })
 
-const contenedorProductos = document.querySelector("#contenedor-productos")
-const botonesCategorias = document.querySelectorAll(".boton-categoria")
-const tituloPrincipal = document.querySelector("#titulo-principal")
-let botonesAgregar = document.querySelectorAll(".producto-agregar")
-const numerito = document.querySelector("#numerito")
+const containerProducts = document.querySelector("#container-products")
+const buttonsCategories = document.querySelectorAll(".button-category")
+const titlePrincipal = document.querySelector("#title-principal")
+let buttonsAdd = document.querySelectorAll(".product-add")
+const littleNumber = document.querySelector("#littleNumber")
 
 
-function cargarProductos(productosElegidos) {
+function uploadProducts(productsChosen) {
 
-    contenedorProductos.innerHTML = ""
+    containerProducts.innerHTML = ""
 
-    productosElegidos.forEach(producto => {
+    productsChosen.forEach(product => {
 
         const div = document.createElement("div")
-        div.classList.add("producto")
+        div.classList.add("product")
         div.innerHTML = `
-            <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-            <div class="producto-detalles">
-                <h3 class="producto-titulo">${producto.titulo}</h3>
-                <p class="producto-precio">$${producto.precio}</p>
-                <button class="producto-agregar" id="${producto.id}">Agregar</button>
+            <img class="product-image" src="${product.image}" alt="${product.title}">
+            <div class="product-details">
+                <h3 class="product-title">${product.title}</h3>
+                <p class="product-price">$${product.price}</p>
+                <button class="product-add" id="${product.id}">Agregar</button>
             </div>
         `
-        contenedorProductos.append(div)
+        containerProducts.append(div)
     })
 
-    actualizarBotonesAgregar()
+    updateButtonsAdd()
 }
 
-cargarProductos(productos)
+uploadProducts(products)
 
-botonesCategorias.forEach(boton => {
-    boton.addEventListener("click", (e) => {
+buttonsCategories.forEach(button => {
+    button.addEventListener("click", (e) => {
 
-        botonesCategorias.forEach(boton => boton.classList.remove("active"))
+        buttonsCategories.forEach(button => button.classList.remove("active"))
         e.currentTarget.classList.add("active")
 
         if (e.currentTarget.id != "todos") {
-            const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id)
-            tituloPrincipal.innerText = productoCategoria.categoria.nombre
+            const productCategory = products.find(product => product.category.id === e.currentTarget.id)
+            titlePrincipal.innerText = productCategory.category.nombre
 
-            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id)
-            cargarProductos(productosBoton)
+            const productsButton = products.filter(product => product.category.id === e.currentTarget.id)
+            uploadProducts(productsButton)
         } else {
-            tituloPrincipal.innerText = "Todos los productos"
-            cargarProductos(productos)
+            titlePrincipal.innerText = "Todos los productos"
+            uploadProducts(products)
         }
     })
 })
 
-function actualizarBotonesAgregar() {
-    botonesAgregar = document.querySelectorAll(".producto-agregar")
+function updateButtonsAdd() {
+    buttonsAdd = document.querySelectorAll(".product-add")
 
-    botonesAgregar.forEach(boton => {
-        boton.addEventListener("click", agregarAlCarrito)
+    buttonsAdd.forEach(button => {
+        button.addEventListener("click", addToCart)
     })
 }
 
-let productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || []
-if (productosEnCarrito.length > 0) actualizarNumerito()
+let productsInCart = JSON.parse(localStorage.getItem("products-in-cart")) || []
+if (productsInCart.length > 0) updateLittleNumber()
 
-function agregarAlCarrito(e) {
+function addToCart(e) {
 
     Toastify({
         text: "PRODUCTO AGREGADO",
@@ -78,29 +78,29 @@ function agregarAlCarrito(e) {
         gravity: "top",
         stopOnFocus: true,
         style: {
-          background: "#7aa3db",
+          background: "#4593b7a2",
           borderRadius: "2rem",
           fontSize: "0.75rem"
         }
     }).showToast()
 
-    const idBoton = e.currentTarget.id
-    const productoAgregado = productos.find(producto => producto.id === idBoton)
+    const idButton = e.currentTarget.id
+    const productIncorporated = products.find(product => product.id === idButton)
 
-    if (productosEnCarrito.some(producto => producto.id === idBoton)) {
-        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton)
-        productosEnCarrito[index].cantidad++
+    if (productsInCart.some(product => product.id === idButton)) {
+        const index = productsInCart.findIndex(product => product.id === idButton)
+        productsInCart[index].volume++
     } else {
-        productoAgregado.cantidad = 1
-        productosEnCarrito.push(productoAgregado)
+        productIncorporated.volume = 1
+        productsInCart.push(productIncorporated)
     }
 
-    actualizarNumerito()
+    updateLittleNumber()
 
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito))
+    localStorage.setItem("products-in-cart", JSON.stringify(productsInCart))
 }
 
-function actualizarNumerito() {
-    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0)
-    numerito.innerText = nuevoNumerito
+function updateLittleNumber() {
+    let newLittleNumber = productsInCart.reduce((acc, product) => acc + product.volume, 0)
+    littleNumber.innerText = newLittleNumber
 }

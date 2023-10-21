@@ -1,0 +1,202 @@
+[
+        {
+                "id": "1",
+                "title": "Low Dunk Azul",
+                "image": "../img/nike-lowdunk-azul.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 50000
+        },
+        {
+                "id": "2",
+                "title": "Jordan Celeste",
+                "image": "../img/nike-jordan-celeste.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 126500
+        },
+        {
+                "id": "3",
+                "title": "Dunk Low Bordo",
+                "image": "../img/nike-dunklow-bordo.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 45000
+        },
+        {
+                "id": "4",
+                "title": "Jordan Roja",
+                "image": "../img/nike-jordan-roja.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 149000
+        },
+        {
+                "id": "5",
+                "title": "Air Negro",
+                "image": "../img/nike-air-negro.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 73000
+        },
+        {
+                "id": "6",
+                "title": "Jordan Max Gris",
+                "image": "../img/nike-jordanmax-gris.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 51600
+        },
+        {
+                "id": "7",
+                "title": "Air Force Gris",
+                "image": "../img/nike-airforce-gris.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 79500
+        },
+        {
+                "id": "8",
+                "title": "Jordan Low Verde",
+                "image": "../img/nike-jordanlow-verde.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 50000
+        },
+        {
+                "id": "9",
+                "title": "Low Retro Acqua",
+                "image": "../img/nike-lowretro-acqua.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 59000
+        },
+        {
+                "id": "10",
+                "title": "Force Camel",
+                "image": "../img/nike-force-camel.png",
+                "category": {
+                        "nombre": "Hombre",
+                        "id": "hombre"
+                },
+                "price": 66500
+        },
+        {
+                "id": "11",
+                "title": "Air Force Blanca",
+                "image": "../img/nike-airforce-blanca.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 45000
+        },
+        {
+                "id": "12",
+                "title": "Jordan Rosa",
+                "image": "../img/nike-jordan-rosa.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 54900
+        },
+        {
+                "id": "13",
+                "title": "Jodan Max Rosa",
+                "image": "../img/nike-jordanmax-rosa.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 70300
+        },
+        {
+                "id": "14",
+                "title": "Jordan One Rosa",
+                "image": "../img/nike-jordanone-rosa.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 41600
+        },
+        {
+                "id": "15",
+                "title": "Run Naranja",
+                "image": "../img/nike-run-naranja.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 76500
+        },
+        {
+                "id": "16",
+                "title": "Low Dunk Naranja",
+                "image": "../img/nike-lowdunk-naranja.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 58000
+        },
+        {
+                "id": "17",
+                "title": "Air Run Blanco",
+                "image": "../img/nike-airrun-blanco.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 140900
+        },
+        {
+                "id": "18",
+                "title": "Jordan Violeta",
+                "image": "../img/nike-jordan-violeta.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 70300
+        },
+        {
+                "id": "19",
+                "title": "Air Max Azul",
+                "image": "../img/nike-airmax-azul.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 110600
+        },
+        {
+                "id": "20",
+                "title": "Skate Marron",
+                "image": "../img/nike-skate-marron.png",
+                "category": {
+                        "nombre": "Mujer",
+                        "id": "mujer"
+                },
+                "price": 126500
+        }
+]
