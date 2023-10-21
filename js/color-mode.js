@@ -6,7 +6,7 @@ function detectColorScheme() {
                         theme = "dark"
                 }
         } else if (!window.matchMedia) {
-                return false;
+                return false
         } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
                 theme = "dark"
         }

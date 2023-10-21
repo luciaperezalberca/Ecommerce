@@ -30,7 +30,7 @@
     --clr-bg: #252525;
     --clr-bg-main: #1e1e1e;
     --clr-bg-details: #4593b76a;
-    --clr-details-pink: rgba(249, 102, 114, 0.749);
+    --clr-details-pink: #f96672bf;
     --cl-bg-button: #232323bd;
     --cl-bg-button-hover: #333232;
     --clr-bg-cart: #333333;
@@ -291,6 +291,10 @@ main {
 
 .cart-actions-buy:hover {
     opacity: 80%;
+}
+
+.cart-bought, .cart-empty {
+    margin-top: 2rem;
 }
 
 .disabled {

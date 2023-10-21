@@ -100,7 +100,15 @@ function updateTotal() {
 }
 
 buttonBuy.addEventListener("click", buyCart)
+
 function buyCart() {
+
+    Swal.fire({
+        title: '¡Compra exitosa!',
+        html: 'Nos pondremos en contacto a la brevedad',
+        icon: 'success',
+        confirmButtonColor: '#4593b7a2'
+    })
 
     productsInCart.length = 0
     localStorage.setItem("products-in-cart", JSON.stringify(productsInCart))
