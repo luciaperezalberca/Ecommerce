@@ -42,7 +42,7 @@ function uploadProductsCart() {
                     <small>Subtotal</small>
                     <p>$${product.price * product.volume}</p>
                 </div>
-                <button class="cart-product-eliminar" id="${product.id}"><i class="bi bi-trash-fill"></i></button>
+                <button class="cart-product-eliminar" id="${product.id}"><i class="bi bi-trash3"></i></button>
             `
             containerCartProducts.append(div)
         })
