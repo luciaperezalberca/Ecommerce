@@ -22,42 +22,30 @@
 </head>
 <body>
 
-    <div class="general-container">
-        <aside>
-            <header>
-                <a class="logo" href="../index.html"><img src="../img/logo.png" alt="logo de la marca Feel Good Shoes" width="150" height="150"></a>
-            </header>
+    
+        
+    <header>
+        <div class="container-nav">
+            <a class="logo" href="../index.html"><img src="../img/logo.png" alt="logo de la marca Feel Good Shoes" width="150" height="150"></a>
             <nav class="nav-cart">
-                <ul>
-                    <li>
-                        <a class="button-menu button-back" href="../index.html"> Seguir comprando </a>
-                    </li>
-                    <li class="li-button-cart">
-                        <a class="button-menu button-cart active" href="cart.html">
-                            <i class="bi bi-bag"></i> Carrito
-                        </a>
-                    </li>
-                </ul>
-                
+                <a class="button-menu button-back" href="../index.html"> Seguir comprando </a>
             </nav>
-            <footer>
-                <a href="about.html"> Sobre nosotros </a>
-                <div class="button-mode">
-                    <button id="color-mode"><i class="bi bi-circle-half"></i></button>
-                    <p class="p-mode"> Color Mode </p>
-                </div>
-                <p class="text-footer"> &copy; 2023. Todos los derechos reservados Feel Good Shoes </p>
-            </footer>
-        </aside>
-        <main>
+        </div>
+        
+    </header>
+    <main>
+        <div class="general-container">
             <h2 class="title-principal"> Productos en tu carrito </h2>
             <div class="container-cart">
-                <p id="cart-empty" class="cart-empty"> Tu carrito se encuentra vacío </p>
 
+                <div class="cart-empty">
+                    <p id="cart-empty"> Tu carrito se encuentra vacío </p>
+                </div>
+    
                 <div id="cart-products" class="cart-products disabled">
                     <!-- aca van los productos del carrito con js -->
                 </div>
-
+    
                 <div id="cart-actions" class="cart-actions disabled">
                     <div class="cart-action">
                         <div class="cart-actions-total">
@@ -67,12 +55,21 @@
                         <button id="cart-actions-buy" class="cart-actions-buy"> Finalizar compra </button>
                     </div>
                 </div>
-
+    
                 <p id="cart-bought" class="cart-bought disabled"> Has finalizado tu compra con éxito! </p>
-
+    
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+    <footer>
+        <div class="links-footer">
+            <a href="about.html"> Sobre nosotros </a>
+            <button id="color-mode"><i class="bi bi-circle-half"></i></button>
+        </div>
+        
+        <p class="text-footer"> &copy; 2024. Todos los derechos reservados</p>
+    </footer>
+    
 
     <!-- link de tostify y sweetalert js -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
