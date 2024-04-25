@@ -362,7 +362,7 @@ main {
     border-radius: 1.5rem;
 }
 
-@media (width < 1000px) {
+@media (min-width: 401px) and (max-width: 1000px) {
     .container-products {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -375,7 +375,7 @@ main {
     }
 }
 
-@media (width < 800px) {
+@media (min-width: 401px) and (max-width: 800px) {
     .cart-product {
         flex-direction: column;
     }
@@ -399,7 +399,7 @@ main {
     }
 }
 
-@media (width < 400px) {
+@media (max-width: 400px) {
     .container-nav {
         flex-direction: column;
     }
