@@ -373,9 +373,7 @@ main {
     .info-cards-about {
        font-size: 0.9rem;
     }
-}
 
-@media (min-width: 401px) and (max-width: 800px) {
     .cart-product {
         flex-direction: column;
     }
