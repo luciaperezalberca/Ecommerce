@@ -437,4 +437,8 @@ main {
     .cart-actions {
         margin-right: 0rem;
     }
+
+    .cart-product {
+        flex-direction: column;
+    }
 }
